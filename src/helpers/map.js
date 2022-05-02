@@ -4,13 +4,13 @@ import {defaults, MousePosition} from "ol/control";
 import TileLayer from "ol/layer/Tile";
 import { OSM } from "ol/source";
 
-export const MAP_CENTER = [2119445, 6926417];
+import {MAP_CENTER, MAP_PROJECTION} from "../constants/config";
 
 const initializeMap = () => {
   return new Map({
     target: "map",
     view: new View({
-      projection: "EPSG:3857",
+      projection: MAP_PROJECTION,
       center: MAP_CENTER,
       zoom: 12,
     }),
